@@ -1,0 +1,534 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<vehicle type="FendtLelyVariableCapacity">
+    <annotation>no.naim, sperrgebiet</annotation>
+    <storeData>
+        <name>Tigo XR 100 D</name>
+        <specs>
+            <neededPower>250</neededPower>
+            <combination>Agco 2300</combination>
+        </specs>
+        <functions>
+            <function>$l10n_function_forageWagon</function>
+        </functions>
+        <image>store_fendtTigoLoaderWagon.dds</image>
+        <price>136300</price>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>FENDT</brand>
+        <category>loaderWagons</category>
+        <vertexBufferMemoryUsage>2098148</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>289782</indexBufferMemoryUsage>
+        <textureMemoryUsage>10486216</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_forageWagon</typeDesc>
+        <filename>fendtTigo.i3d</filename>
+        <size width="3.5" length="13"/>
+        <speedLimit value="20"/>
+        <components>
+            <component centerOfMass="0 0.62 -0.8" solverIterationCount="10" mass="12300"/>
+            <component centerOfMass="0 0 0" solverIterationCount="10" mass="62"/>
+            <joint component1="1" component2="2" node="0>0|5|0" rotLimit="0 0 0" transLimit="0 0 0"/>
+        </components>
+        <schemaOverlay attacherJointPosition="0 0">
+            <default name="DEFAULT_IMPLEMENT"/>
+            <turnedOn name="DEFAULT_IMPLEMENT_ON"/>
+            <selected name="DEFAULT_IMPLEMENT_SELECTED"/>
+            <turnedOnSelected name="DEFAULT_IMPLEMENT_SELECTED_ON"/>
+        </schemaOverlay>
+    </base>
+
+	<designConfigurations>
+        <designConfiguration name="$l10n_config_woDosingUnit" price="0">	  
+			<objectChange node="0>0|3|0" visibilityActive="false" visibilityInactive="true"/>
+			<objectChange node="0>" massActive="12300" />			
+		</designConfiguration>
+        <designConfiguration name="$l10n_config_wDosingUnit" price="5000">
+			<objectChange node="0>0|3|0" visibilityActive="true" visibilityInactive="false"/>		
+			<objectChange node="0>" massActive="12800" />
+		</designConfiguration>
+	</designConfigurations>	
+	
+    <wheels>
+        <wheelConfigurations>
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="TRELLEBORG">
+                <wheels>
+                    <wheel filename="$data/shared/wheels/trelleborg/TwinRadial/710_50R26_5.xml" isLeft="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="3.2" repr="0>0|0|0" radius="0.601" width="0.71" mass="0.17" maxDeformation="0.06" forcePointRatio="0.3" initialCompression="05" suspTravel="0.2" spring="40" damper="50"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/trelleborg/TwinRadial/710_50R26_5.xml" isLeft="false">
+                        <physics tipOcclusionAreaGroupId="2" restLoad="3.2" repr="0>0|0|1" radius="0.601" width="0.71" mass="0.17" maxDeformation="0.06" forcePointRatio="0.3" initialCompression="05" suspTravel="0.2" spring="40" damper="50"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/trelleborg/TwinRadial/710_50R26_5.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="2.2" repr="0>0|0|2" driveNode="0>0|0|2|0" radius="0.601" width="0.71" mass="0.17" maxDeformation="0.06" forcePointRatio="0.3" initialCompression="25" suspTravel="0.2" spring="40" damper="50"/>
+                        <steeringAxle scale="0.3" rotMax="10" rotMin="-10"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/trelleborg/TwinRadial/710_50R26_5.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="2" restLoad="2.2" repr="0>0|0|4" driveNode="0>0|0|4|0" radius="0.601" width="0.71" mass="0.17" maxDeformation="0.06" forcePointRatio="0.3" initialCompression="25" suspTravel="0.2" spring="40" damper="50"/>
+                        <steeringAxle scale="0.3" rotMax="10" rotMin="-10"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/trelleborg/TwinRadial/710_50R26_5.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="2.2" repr="0>0|0|3" driveNode="0>0|0|3|0" radius="0.601" width="0.71" mass="0.17" maxDeformation="0.06" forcePointRatio="0.3" initialCompression="25" suspTravel="0.2" spring="40" damper="50"/>
+                        <steeringAxle scale="-0.7" rotMax="25" rotMin="-25"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/trelleborg/TwinRadial/710_50R26_5.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="2" restLoad="2.2" repr="0>0|0|5" driveNode="0>0|0|5|0" radius="0.601" width="0.71" mass="0.17" maxDeformation="0.06" forcePointRatio="0.3" initialCompression="25" suspTravel="0.2" spring="40" damper="50"/>
+                        <steeringAxle scale="-0.7" rotMax="25" rotMin="-25"/>
+                    </wheel>
+					
+                    <!-- pickup -->
+                    <wheel rotMin="-10" rotMax="30">
+                        <physics tipOcclusionAreaGroupId="3" restLoad="1.9" repr="1>0" driveNode="1>0|0" forcePointRatio="0.3" radius="0.203" width="0.16" mass="0.01" brakeFactor="0" initialCompression="60" suspTravel="0.03" spring="40" damper="50" rotationDamping="0.0001" versatileYRot="true"/>
+                    </wheel>
+                    <wheel rotMin="-10" rotMax="30">
+                        <physics tipOcclusionAreaGroupId="3" restLoad="1.9" repr="1>1" driveNode="1>1|0" forcePointRatio="0.3" radius="0.203" width="0.16" mass="0.01" brakeFactor="0" initialCompression="60" suspTravel="0.03" spring="40" damper="50" rotationDamping="0.0001" versatileYRot="true"/>
+                    </wheel>				
+                </wheels>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueWheelBroad" price="5200" icon="$dataS2/menu/hud/configurations/config_wheel_broad.png" brand="TRELLEBORG">
+                <wheels>
+                    <wheel filename="$data/shared/wheels/trelleborg/T404/800_40R26_5.xml" isLeft="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="3.2" repr="0>0|0|0" radius="0.601" width="0.71" mass="0.17" maxDeformation="0.06" forcePointRatio="0.3" initialCompression="05" suspTravel="0.2" spring="40" damper="50"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/trelleborg/T404/800_40R26_5.xml" isLeft="false">
+                        <physics tipOcclusionAreaGroupId="2" restLoad="3.2" repr="0>0|0|1" radius="0.601" width="0.71" mass="0.17" maxDeformation="0.06" forcePointRatio="0.3" initialCompression="05" suspTravel="0.2" spring="40" damper="50"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/trelleborg/T404/800_40R26_5.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="2.2" repr="0>0|0|2" driveNode="0>0|0|2|0" radius="0.601" width="0.71" mass="0.17" maxDeformation="0.06" forcePointRatio="0.3" initialCompression="25" suspTravel="0.2" spring="40" damper="50"/>
+                        <steeringAxle scale="0.3" rotMax="10" rotMin="-10"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/trelleborg/T404/800_40R26_5.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="2" restLoad="2.2" repr="0>0|0|4" driveNode="0>0|0|4|0" radius="0.601" width="0.71" mass="0.17" maxDeformation="0.06" forcePointRatio="0.3" initialCompression="25" suspTravel="0.2" spring="40" damper="50"/>
+                        <steeringAxle scale="0.3" rotMax="10" rotMin="-10"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/trelleborg/T404/800_40R26_5.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="2.2" repr="0>0|0|3" driveNode="0>0|0|3|0" radius="0.601" width="0.71" mass="0.17" maxDeformation="0.06" forcePointRatio="0.3" initialCompression="25" suspTravel="0.2" spring="40" damper="50"/>
+                        <steeringAxle scale="-0.7" rotMax="25" rotMin="-25"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/trelleborg/T404/800_40R26_5.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="2" restLoad="2.2" repr="0>0|0|5" driveNode="0>0|0|5|0" radius="0.601" width="0.71" mass="0.17" maxDeformation="0.06" forcePointRatio="0.3" initialCompression="25" suspTravel="0.2" spring="40" damper="50"/>
+                        <steeringAxle scale="-0.7" rotMax="25" rotMin="-25"/>
+                    </wheel>
+
+                    <!-- pickup -->					
+                    <wheel rotMin="-10" rotMax="30">
+                        <physics tipOcclusionAreaGroupId="3" restLoad="1.9" repr="1>0" driveNode="1>0|0" forcePointRatio="0.3" radius="0.203" width="0.16" mass="0.01" brakeFactor="0" initialCompression="60" suspTravel="0.03" spring="40" damper="50" rotationDamping="0.0001" versatileYRot="true"/>
+                    </wheel>
+                    <wheel rotMin="-10" rotMax="30">
+                        <physics tipOcclusionAreaGroupId="3" restLoad="1.9" repr="1>1" driveNode="1>1|0" forcePointRatio="0.3" radius="0.203" width="0.16" mass="0.01" brakeFactor="0" initialCompression="60" suspTravel="0.03" spring="40" damper="50" rotationDamping="0.0001" versatileYRot="true"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueWheelBroad" price="5100" icon="$dataS2/menu/hud/configurations/config_wheel_broad.png" brand="TRELLEBORG">
+                <wheels>
+                    <wheel filename="$data/shared/wheels/trelleborg/TwinRadial/680_55R26_5.xml" isLeft="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="3.2" repr="0>0|0|0" radius="0.601" width="0.71" mass="0.17" maxDeformation="0.06" forcePointRatio="0.3" initialCompression="05" suspTravel="0.2" spring="40" damper="50"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/trelleborg/TwinRadial/680_55R26_5.xml" isLeft="false">
+                        <physics tipOcclusionAreaGroupId="2" restLoad="3.2" repr="0>0|0|1" radius="0.601" width="0.71" mass="0.17" maxDeformation="0.06" forcePointRatio="0.3" initialCompression="05" suspTravel="0.2" spring="40" damper="50"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/trelleborg/TwinRadial/680_55R26_5.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="2.2" repr="0>0|0|2" driveNode="0>0|0|2|0" radius="0.601" width="0.71" mass="0.17" maxDeformation="0.06" forcePointRatio="0.3" initialCompression="25" suspTravel="0.2" spring="40" damper="50"/>
+                        <steeringAxle scale="0.3" rotMax="10" rotMin="-10"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/trelleborg/TwinRadial/680_55R26_5.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="2" restLoad="2.2" repr="0>0|0|4" driveNode="0>0|0|4|0" radius="0.601" width="0.71" mass="0.17" maxDeformation="0.06" forcePointRatio="0.3" initialCompression="25" suspTravel="0.2" spring="40" damper="50"/>
+                        <steeringAxle scale="0.3" rotMax="10" rotMin="-10"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/trelleborg/TwinRadial/680_55R26_5.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="2.2" repr="0>0|0|3" driveNode="0>0|0|3|0" radius="0.601" width="0.71" mass="0.17" maxDeformation="0.06" forcePointRatio="0.3" initialCompression="25" suspTravel="0.2" spring="40" damper="50"/>
+                        <steeringAxle scale="-0.7" rotMax="25" rotMin="-25"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/trelleborg/TwinRadial/680_55R26_5.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="2" restLoad="2.2" repr="0>0|0|5" driveNode="0>0|0|5|0" radius="0.601" width="0.71" mass="0.17" maxDeformation="0.06" forcePointRatio="0.3" initialCompression="25" suspTravel="0.2" spring="40" damper="50"/>
+                        <steeringAxle scale="-0.7" rotMax="25" rotMin="-25"/>
+                    </wheel>
+					
+                    <!-- pickup -->					
+                    <wheel rotMin="-10" rotMax="30">
+                        <physics tipOcclusionAreaGroupId="3" restLoad="1.9" repr="1>0" driveNode="1>0|0" forcePointRatio="0.3" radius="0.203" width="0.16" mass="0.01" brakeFactor="0" initialCompression="60" suspTravel="0.03" spring="40" damper="50" rotationDamping="0.0001" versatileYRot="true"/>
+                    </wheel>
+                    <wheel rotMin="-10" rotMax="30">
+                        <physics tipOcclusionAreaGroupId="3" restLoad="1.9" repr="1>1" driveNode="1>1|0" forcePointRatio="0.3" radius="0.203" width="0.16" mass="0.01" brakeFactor="0" initialCompression="60" suspTravel="0.03" spring="40" damper="50" rotationDamping="0.0001" versatileYRot="true"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+			
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="4200" brand="MICHELIN">
+                <wheels>
+                    <wheel filename="$data/shared/wheels/michelin/cargoXBib/710_50R26_5.xml" isLeft="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="3.2" repr="0>0|0|0" radius="0.601" width="0.71" mass="0.17" maxDeformation="0.06" forcePointRatio="0.3" initialCompression="05" suspTravel="0.2" spring="40" damper="50"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/michelin/cargoXBib/710_50R26_5.xml" isLeft="false">
+                        <physics tipOcclusionAreaGroupId="2" restLoad="3.2" repr="0>0|0|1" radius="0.601" width="0.71" mass="0.17" maxDeformation="0.06" forcePointRatio="0.3" initialCompression="05" suspTravel="0.2" spring="40" damper="50"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/michelin/cargoXBib/710_50R26_5.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="2.2" repr="0>0|0|2" driveNode="0>0|0|2|0" radius="0.601" width="0.71" mass="0.17" maxDeformation="0.06" forcePointRatio="0.3" initialCompression="25" suspTravel="0.2" spring="40" damper="50"/>
+                        <steeringAxle scale="0.3" rotMax="10" rotMin="-10"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/michelin/cargoXBib/710_50R26_5.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="2" restLoad="2.2" repr="0>0|0|4" driveNode="0>0|0|4|0" radius="0.601" width="0.71" mass="0.17" maxDeformation="0.06" forcePointRatio="0.3" initialCompression="25" suspTravel="0.2" spring="40" damper="50"/>
+                        <steeringAxle scale="0.3" rotMax="10" rotMin="-10"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/michelin/cargoXBib/710_50R26_5.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="2.2" repr="0>0|0|3" driveNode="0>0|0|3|0" radius="0.601" width="0.71" mass="0.17" maxDeformation="0.06" forcePointRatio="0.3" initialCompression="25" suspTravel="0.2" spring="40" damper="50"/>
+                        <steeringAxle scale="-0.7" rotMax="25" rotMin="-25"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/michelin/cargoXBib/710_50R26_5.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="2" restLoad="2.2" repr="0>0|0|5" driveNode="0>0|0|5|0" radius="0.601" width="0.71" mass="0.17" maxDeformation="0.06" forcePointRatio="0.3" initialCompression="25" suspTravel="0.2" spring="40" damper="50"/>
+                        <steeringAxle scale="-0.7" rotMax="25" rotMin="-25"/>
+                    </wheel>
+					
+                    <!-- pickup -->
+                    <wheel rotMin="-10" rotMax="30">
+                        <physics tipOcclusionAreaGroupId="3" restLoad="1.9" repr="1>0" driveNode="1>0|0" forcePointRatio="0.3" radius="0.203" width="0.16" mass="0.01" brakeFactor="0" initialCompression="60" suspTravel="0.03" spring="40" damper="50" rotationDamping="0.0001" versatileYRot="true"/>
+                    </wheel>
+                    <wheel rotMin="-10" rotMax="30">
+                        <physics tipOcclusionAreaGroupId="3" restLoad="1.9" repr="1>1" driveNode="1>1|0" forcePointRatio="0.3" radius="0.203" width="0.16" mass="0.01" brakeFactor="0" initialCompression="60" suspTravel="0.03" spring="40" damper="50" rotationDamping="0.0001" versatileYRot="true"/>
+                    </wheel>				
+                </wheels>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueWheelBroad" price="5250" icon="$dataS2/menu/hud/configurations/config_wheel_broad.png" brand="MICHELIN">
+                <wheels>
+                    <wheel filename="$data/shared/wheels/michelin/cargoXBib/800_45R26_5.xml" isLeft="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="3.2" repr="0>0|0|0" radius="0.601" width="0.71" mass="0.17" maxDeformation="0.06" forcePointRatio="0.3" initialCompression="05" suspTravel="0.2" spring="40" damper="50"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/michelin/cargoXBib/800_45R26_5.xml" isLeft="false">
+                        <physics tipOcclusionAreaGroupId="2" restLoad="3.2" repr="0>0|0|1" radius="0.601" width="0.71" mass="0.17" maxDeformation="0.06" forcePointRatio="0.3" initialCompression="05" suspTravel="0.2" spring="40" damper="50"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/michelin/cargoXBib/800_45R26_5.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="2.2" repr="0>0|0|2" driveNode="0>0|0|2|0" radius="0.601" width="0.71" mass="0.17" maxDeformation="0.06" forcePointRatio="0.3" initialCompression="25" suspTravel="0.2" spring="40" damper="50"/>
+                        <steeringAxle scale="0.3" rotMax="10" rotMin="-10"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/michelin/cargoXBib/800_45R26_5.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="2" restLoad="2.2" repr="0>0|0|4" driveNode="0>0|0|4|0" radius="0.601" width="0.71" mass="0.17" maxDeformation="0.06" forcePointRatio="0.3" initialCompression="25" suspTravel="0.2" spring="40" damper="50"/>
+                        <steeringAxle scale="0.3" rotMax="10" rotMin="-10"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/michelin/cargoXBib/800_45R26_5.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="2.2" repr="0>0|0|3" driveNode="0>0|0|3|0" radius="0.601" width="0.71" mass="0.17" maxDeformation="0.06" forcePointRatio="0.3" initialCompression="25" suspTravel="0.2" spring="40" damper="50"/>
+                        <steeringAxle scale="-0.7" rotMax="25" rotMin="-25"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/michelin/cargoXBib/800_45R26_5.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="2" restLoad="2.2" repr="0>0|0|5" driveNode="0>0|0|5|0" radius="0.601" width="0.71" mass="0.17" maxDeformation="0.06" forcePointRatio="0.3" initialCompression="25" suspTravel="0.2" spring="40" damper="50"/>
+                        <steeringAxle scale="-0.7" rotMax="25" rotMin="-25"/>
+                    </wheel>
+
+                    <!-- pickup -->					
+                    <wheel rotMin="-10" rotMax="30">
+                        <physics tipOcclusionAreaGroupId="3" restLoad="1.9" repr="1>0" driveNode="1>0|0" forcePointRatio="0.3" radius="0.203" width="0.16" mass="0.01" brakeFactor="0" initialCompression="60" suspTravel="0.03" spring="40" damper="50" rotationDamping="0.0001" versatileYRot="true"/>
+                    </wheel>
+                    <wheel rotMin="-10" rotMax="30">
+                        <physics tipOcclusionAreaGroupId="3" restLoad="1.9" repr="1>1" driveNode="1>1|0" forcePointRatio="0.3" radius="0.203" width="0.16" mass="0.01" brakeFactor="0" initialCompression="60" suspTravel="0.03" spring="40" damper="50" rotationDamping="0.0001" versatileYRot="true"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+        </wheelConfigurations>
+
+        <rimColor>FENDT_RED1</rimColor>
+		
+        <hubs>
+            <color0>0 0 0 1</color0>
+            <color1>0 0 0 1</color1>
+            <hub linkNode="0>0|0|0"  filename="$data/shared/wheels/hubs/hub_n10_5.xml" isLeft="true"  scale="0.335 0.335 0.335" />
+            <hub linkNode="0>0|0|1" filename="$data/shared/wheels/hubs/hub_n10_5.xml" isLeft="false" scale="0.335 0.335 0.335" />
+            <hub linkNode="0>0|0|2|0"   filename="$data/shared/wheels/hubs/hub_n10_5.xml" isLeft="true"  scale="0.335 0.335 0.335" />
+            <hub linkNode="0>0|0|4|0"  filename="$data/shared/wheels/hubs/hub_n10_5.xml" isLeft="false" scale="0.335 0.335 0.335" />
+            <hub linkNode="0>0|0|3|0"   filename="$data/shared/wheels/hubs/hub_n10_5.xml" isLeft="true"  scale="0.335 0.335 0.335" />
+            <hub linkNode="0>0|0|5|0"  filename="$data/shared/wheels/hubs/hub_n10_5.xml" isLeft="false" scale="0.335 0.335 0.335" />			
+        </hubs>			
+        <dynamicallyLoadedWheels>
+            <dynamicallyLoadedWheel linkNode="0>0|5|1|0|0" filename="$data/shared/wheels/trelleborg/T510/16x6_50R8.xml" isLeft="false"/>
+            <dynamicallyLoadedWheel linkNode="0>0|5|1|1|0" filename="$data/shared/wheels/trelleborg/T510/16x6_50R8.xml" isLeft="true"/>
+        </dynamicallyLoadedWheels>
+    </wheels>
+
+    <speedRotatingParts>
+        <speedRotatingPart node="0>0|5|4|0|0" radius="0.091" wheelIndex="5" onlyActiveWhenLowered="true"/>
+        <speedRotatingPart node="0>0|5|2|4" radius="0.65" groundReferenceNodeIndex="1" onlyActiveWhenLowered="true" rotateOnlyIfFillLevelIncreased="true"/>
+        <speedRotatingPart node="0>0|5|1|0|0" wheelIndex="5"/>
+        <speedRotatingPart node="0>0|5|1|1|0" wheelIndex="6"/>
+    </speedRotatingParts>
+
+    <attachable>
+        <inputAttacherJoints>
+            <inputAttacherJoint node="0>0|6|0|0" jointType="trailerLow" attacherHeight="0.7" steeringBarRightNode="0>0|6|0|3|0"/>
+        </inputAttacherJoints>
+        <support animationName="moveSupport"/>
+        <brakeForce>1.8</brakeForce>
+        <steeringAxleAngleScale startSpeed="0" endSpeed="90" backwards="true"/>
+        <airConsumer usage="0.5"/>
+    </attachable>
+
+    <connectionHoses>
+        <hose inputAttacherJointIndices="1" type="hydraulicOut" node="0>0|6|0|9|0" length="1" diameter="0.02" straighteningFactor="0.5">
+            <objectChange node="0>0|6|0|7|0" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="hydraulicOut" node="0>0|6|0|9|1" length="1" diameter="0.02" straighteningFactor="0.5">
+            <objectChange node="0>0|6|0|7|1" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="hydraulicIn"  node="0>0|6|0|9|2"  length="1" diameter="0.02" straighteningFactor="0.5">
+            <objectChange node="0>0|6|0|7|2" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="hydraulicIn"  node="0>0|6|0|9|3"  length="1" diameter="0.02" straighteningFactor="0.5">
+            <objectChange node="0>0|6|0|7|3" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="electric"  node="0>0|6|0|9|4"  length="1" diameter="0.005" straighteningFactor="0.5">
+            <objectChange node="0>0|6|0|7|4" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+		<hose inputAttacherJointIndices="1" type="airDoubleRed" node="0>0|6|0|9|5" length="1.2" diameter="0.015" straighteningFactor="2"/>
+		<hose inputAttacherJointIndices="1" type="airDoubleYellow" node="0>0|6|0|9|6" length="1.2" diameter="0.015" straighteningFactor="2"/>
+    </connectionHoses>	
+
+    <powerTakeOffs>
+        <input inputNode="0>0|11" inputAttacherJointIndices="1" aboveAttacher="true" detachNode="ptoDetachNode" filename="$data/shared/assets/powerTakeOffs/walterscheidWWZ.xml"/>
+    </powerTakeOffs>
+
+    <powerConsumer ptoRpm="470" neededMinPtoPower="40" neededMaxPtoPower="100" />
+
+    <lights>
+		<realLights>
+            <high>
+                <light node="0>0|2|0|0|1|0" lightTypes="0"/>				
+                <turnLightLeft node="0>0|2|0|0|2|0"/>
+                <turnLightRight node="0>0|2|0|0|2|1"/>
+                <brakeLight node="0>0|2|0|0|1|0"/>
+            </high>
+        </realLights>
+        <sharedLight linkNode="0>0|2|0|0|0|0" filename="$data/shared/assets/lights/lizard/rear4ChamberLight_01_right.xml" />
+        <sharedLight linkNode="0>0|2|0|0|0|1" filename="$data/shared/assets/lights/lizard/rear4ChamberLight_01_left.xml" />		
+    </lights>
+
+    <groundReferenceNodes>
+        <groundReferenceNode node="0>0|5|2|3" threshold="0.5"/>
+    </groundReferenceNodes>
+
+    <workAreas>
+        <workArea type="forageWagon" functionName="processForageWagonArea" disableBackwards="true" >
+            <area startNode="0>0|13|0" widthNode="0>0|13|1" heightNode="0>0|13|2"/>
+            <groundReferenceNode index="1" />			
+        </workArea>
+    </workAreas>
+
+    <animations>
+        <animation name="moveSupport">
+            <part node="0>0|7|0" startTime="0" endTime="0.3" startRot="-10.53299999 49.44282532 76.24842834" endRot="-50.26399994 0 0"/>
+            <part node="0>0|7|0|0|0|0" startTime="0.3" endTime="0.5" startTrans="0 0 0" endTrans="0 -1.02999997 0"/>
+            <part node="0>0|7|1" startTime="0" endTime="0.5" startTrans="0.464 0.990 1.869" endTrans="0.464 -0.039 1.869"/>
+        </animation>
+        <animation name="rotatePickup">
+            <part node="0>0|5|0" startTime="0" endTime="1" startRot="-25 0 0" endRot="5 0 0"/>
+            <part startTime="0" endTime="1" componentJointIndex="1" startRotLimit="0 0 0" endRotLimit="20 0 0"/>
+        </animation>
+        <animation name="tipAnimationBack">
+            <part node="0>0|2|0" startTime="0" endTime="4" startRot="0 0 0" endRot="90 0 0"/>
+        </animation>
+    </animations>
+
+    <cylindered>
+        <movingTools>
+            <movingTool node="0>0|6|0">
+                <controls axis="AXIS_DRAWBAR" invertAxis="false" mouseSpeedFactor="0.6"/>
+                <rotation rotSpeed="20" rotAcceleration="40" rotMax="20" rotMin="-2" rotationAxis="1"/>
+                <inputAttacherJoint value="true"/>
+                <dependentPart node="0>0|6|0|1"/>
+            </movingTool>
+            <movingTool node="0>0|5|0" playSound="true">
+                <componentJoint index="1"/>
+            </movingTool>
+            <movingTool node="0>0|2|0">
+                <dependentPart node="0>0|2|1"/>
+            </movingTool>
+        </movingTools>
+        <movingParts>
+            <movingPart node="0>0|6|0|1" referencePoint="0>0|6|1" referenceFrame="0>0|6|1" playSound="true">
+                <translatingPart node="0>0|6|0|1|0"/>
+            </movingPart>
+            <movingPart node="0>0|6|0|3|0" referencePoint="0>0|6|0|3|0|0|0" localReferencePoint="0>0|6|0|3|0|0" referenceFrame="0>0|6|0|2">
+                <dependentPart node="0>0|6|0|3|0|0"/>
+                <dependentPart node="0>0|6|0|4"/>
+                <dependentPart node="0>0|6|0|5"/>
+            </movingPart>
+            <movingPart node="0>0|6|0|3|0|0" referencePoint="0>0|6|0|3|0|0|0" referenceFrame="0>"/>
+            <movingPart node="0>0|6|0|4" referencePoint="0>0|6|0|3|0|1" referenceFrame="0>0|6|0|3|0|1">
+                <translatingPart node="0>0|6|0|4|0"/>
+            </movingPart>
+            <movingPart node="0>0|6|0|5" referencePoint="0>0|6|0|3|0|2" referenceFrame="0>0|6|0|3|0|2">
+                <translatingPart node="0>0|6|0|5|0"/>
+            </movingPart>
+            <movingPart node="0>0|5|1" referencePoint="1>2" referenceFrame="1>2" isActiveDirty="true">
+                <dependentPart node="0>0|5|1|0"/>
+                <dependentPart node="0>0|5|1|1"/>
+                <dependentPart node="0>0|5|2"/>
+                <dependentPart node="0>0|5|3"/>
+                <dependentPart node="0>0|5|4"/>
+            </movingPart>
+            <movingPart node="0>0|5|1|0" referenceFrame="1>0" limitedAxis="2"/>
+            <movingPart node="0>0|5|1|1" referenceFrame="1>1" limitedAxis="2"/>
+            <movingPart node="0>0|5|2" referencePoint="0>0|5|1|2" localReferencePoint="0>0|5|2|0" referenceFrame="0>0|5|6">
+                <dependentPart node="0>0|5|2|0"/>
+            </movingPart>
+            <movingPart node="0>0|5|2|0" referencePoint="0>0|5|1|2" referenceFrame="0>0|5|1|2"/>
+            <movingPart node="0>0|5|3" referencePoint="0>0|5|2|1" referenceFrame="0>0|5|2|1">
+                <translatingPart node="0>0|5|3|0"/>
+            </movingPart>
+            <movingPart node="0>0|5|4" referencePoint="0>0|5|2|2" localReferencePoint="0>0|5|4|0" referenceFrame="0>">
+                <dependentPart node="0>0|5|4|0"/>
+            </movingPart>
+            <movingPart node="0>0|5|4|0" referencePoint="0>0|5|2|2" referenceFrame="0>0|5|5"/>
+            <movingPart node="0>0|2|1" referencePoint="0>0|2|0|1" referenceFrame="0>0|2|0|1" playSound="true">
+                <translatingPart node="0>0|2|1|0"/>
+            </movingPart>
+            <movingPart node="0>0|0|6" referencePoint="0>0|0|2|1" referenceFrame="0>0|0|2|1" isActiveDirty="true">
+                <translatingPart node="0>0|0|6|0"/>
+            </movingPart>
+            <movingPart node="0>0|0|8" referencePoint="0>0|0|4|1" referenceFrame="0>0|0|4|1" isActiveDirty="true">
+                <translatingPart node="0>0|0|8|0"/>
+            </movingPart>
+            <movingPart node="0>0|0|4|2" referencePoint="0>0|0|2|2" referenceFrame="0>0|0|2|2" isActiveDirty="true" scaleZ="true"/>
+            <movingPart node="0>0|0|7" referencePoint="0>0|0|3|1" referenceFrame="0>0|0|3|1" isActiveDirty="true">
+                <translatingPart node="0>0|0|7|0"/>
+            </movingPart>
+            <movingPart node="0>0|0|9" referencePoint="0>0|0|5|1" referenceFrame="0>0|0|5|1" isActiveDirty="true">
+                <translatingPart node="0>0|0|9|0"/>
+            </movingPart>
+            <movingPart node="0>0|0|5|2" referencePoint="0>0|0|3|2" referenceFrame="0>0|0|3|2" isActiveDirty="true" scaleZ="true"/>
+        </movingParts>
+
+        <sounds>
+            <hydraulic template="DEFAULT_HYDRAULIC_SOUND" linkNode="tigo_main_component1"/>
+        </sounds>
+    </cylindered>
+
+    <pickup>
+        <animation name="rotatePickup" lowerSpeed="1.5" liftSpeed="-1"/>
+    </pickup>	
+
+	<variableCapacity>54000, 75000, 100000</variableCapacity>
+	
+    <fillUnit>
+        <fillUnitConfigurations>
+            <fillUnitConfiguration name="$l10n_configuration_valueDefault" price="0" >
+                <fillUnits>
+                    <fillUnit unit="$l10n_unit_literShort" fillTypeCategories="forageWagon" capacity="54000" >
+                        <exactFillRootNode node="0>0|12|0" />
+                        <fillRootNode node="0>"/>
+                        <fillMassNode node="0>"/>						
+                        <autoAimTargetNode node="0>0|12|1" startZ="2.5" endZ="-1.3" invert="false" fillUnitIndex="1" startPercentage="25"/>
+                    </fillUnit>
+                </fillUnits>
+            </fillUnitConfiguration>
+        </fillUnitConfigurations>
+    </fillUnit>		
+
+    <fillVolume>
+        <fillVolumeConfigurations>
+            <fillVolumeConfiguration>
+                <volumes>
+                    <volume node="0>0|8|0" maxDelta="0.3" maxAllowedHeapAngle="15" fillUnitIndex="1"/>
+                </volumes>
+            </fillVolumeConfiguration>			
+        </fillVolumeConfigurations>
+
+        <unloadInfos>
+            <unloadInfo>
+                <node node="0>0|8|2|0" width="1.0" length="0.5" minHeight="1.9" priority="2"/>
+                <node node="0>0|8|2|1" width="1.0" length="0.5" minHeight="1.9" priority="2"/>
+                <node node="0>0|8|2|2" width="1.0" length="3.6"/>
+                <node node="0>0|8|2|3" width="1.0" length="3.6"/>
+            </unloadInfo>
+        </unloadInfos>
+        <loadInfos>
+            <loadInfo>
+                <node node="0>0|8|1|0" width="1.0" length="0.5"/>
+                <node node="0>0|8|1|1" width="1.0" length="0.5"/>
+            </loadInfo>
+        </loadInfos>
+		
+        <heightNodes>
+            <heightNode fillVolumeIndex="1">
+                <refNode node="0>0|8|2|0"/>
+                <refNode node="0>0|8|2|1"/>
+                <node node="0>0|9|1" baseScale="1 1 1" transAxis="0 1 0"/>
+            </heightNode>
+        </heightNodes>		
+    </fillVolume>
+
+    <dischargeable>
+        <dischargeNode node="0>0|10" emptySpeed="3423" fillUnitIndex="1" unloadInfoIndex="1">
+            <info width="1.25" />
+            <effects>
+                <effectNode effectClass="TipEffect">
+                    <effectNode effectNode="0>0|9|0" effectClass="ParticleEffect" fadeTime="0.5" delay="0.1" lifespan="0.11"/>
+                    <effectNode effectNode="0>0|9|1" materialType="unloading" materialTypeId="3" fadeTime="0.5" extraDistanceNode="0>0|10"/>
+                </effectNode>
+                <effectNode effectNode="0>0|9|2" materialType="smoke"     materialTypeId="1" fadeTime="0.5"/>
+            </effects>
+        </dischargeNode>
+    </dischargeable>
+
+    <forageWagon workAreaIndex="1" fillUnitIndex="1" loadInfoIndex="1" maxPickupLitersPerSecond="350">
+        <fillEffect>
+            <effectNode effectClass="MorphPositionEffect" effectNode="0>0|19|0" materialType="pickup" materialTypeId="1" delay="0" fadeTime="0.5" speed="0.9" scrollLength="1.5" scrollSpeed="2"/>
+            <effectNode effectClass="ParticleEffect" effectNode="0>0|5|2|5|1" particleType="PICKUP" emitCountScale="6" worldSpace="false" />
+            <effectNode effectClass="ParticleEffect" effectNode="0>0|5|2|5|2"  particleType="PICKUP_FALLING" emitCountScale="2" worldSpace="false" />
+            <effectNode effectClass="ParticleEffect" effectNode="0>0|5|2|5|2" particleType="PICKUP_FALLING" emitCountScale="2" worldSpace="false" />
+        </fillEffect>
+    </forageWagon>	
+
+    <trailer>
+        <trailerConfigurations>
+            <trailerConfiguration name="$l10n_configuration_valueDefault" price="0">
+                <trailer>
+                    <tipSide name="$l10n_info_tipSideBack" dischargeNodeIndex="1">
+                        <animation name="tipAnimationBack" speedScale="1.0" startTipTime="0.15" />
+                        <animationNodes>
+                            <animationNode node="0>0|3|0|0" rotSpeed="1400" rotAxis="1"/>
+                            <animationNode node="0>0|3|0|1" rotSpeed="-1400" rotAxis="1"/>
+                            <animationNode node="0>0|3|0|2" rotSpeed="1400" rotAxis="1"/>
+                            <animationNode node="0>0|4|1" rotSpeed="-1000" rotAxis="1"/>
+                            <animationNode node="0>0|4|2" rotSpeed="-1000" rotAxis="1"/>
+                            <animationNode node="0>0|4|0" class="ScrollingAnimation" scrollSpeed="6.75" shaderParameterName="offsetUV" shaderParameterComponent="1" turnOnFadeTime="1" turnOffFadeTime="1"/>
+                            <animationNode node="0>0|4|0|0" class="ScrollingAnimation" scrollSpeed="0.5" shaderParameterName="offsetUV" shaderParameterComponent="1" turnOnFadeTime="1" turnOffFadeTime="1"/>
+                        </animationNodes>
+                    </tipSide>
+                </trailer>
+            </trailerConfiguration>
+        </trailerConfigurations>
+    </trailer>
+
+    <turnOnVehicle>
+        <animationNodes>
+            <animationNode node="0>0|3|1" rotSpeed="500" rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1"/>
+            <animationNode node="0>0|5|2|3" rotSpeed="-400" rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1"/>
+        </animationNodes>
+
+        <sounds>
+            <work template="FORAGE_WAGON_01" linkNode="tigo_main_component1" />
+        </sounds>		
+    </turnOnVehicle>
+
+    <ai>
+        <allowTurnBackward value="false"/>
+        <turningRadiusLimitation radius="10"/>
+    </ai>
+	
+    <foliageBending>
+        <bendingNode minX="-1.4" maxX="1.4" minZ="-2.8" maxZ="3.4 " yOffset="0.6" />
+        <bendingNode minX="-1.4" maxX="1.4" minZ="-4.9" maxZ="-2.8 " yOffset="1.4" />
+    </foliageBending>
+	
+	<wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
+    <washable dirtDuration="90" washDuration="1" workMultiplier="3" fieldMultiplier="2"/>
+	
+    <i3dMappings>
+		<i3dMapping id="tigo_main_component1" node="0>" />
+		<i3dMapping id="ptoDetachNode" node="0>0|11|0" />
+        <i3dMapping id="IwasTooLazyToGetThroughAllComponents" node="0>" />
+	</i3dMappings>
+</vehicle>

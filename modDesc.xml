@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<modDesc descVersion="42">
+    <author>no.naim, sperrgebiet</author>
+    <version>1.0.0.0</version>
+    <title>
+        <en>Fendt/Lely Tigo XR 100</en>
+        <de>Fendt/Lely Tigo XR 100</de>
+    </title>
+    <description>
+        <en><![CDATA[
+-- FENDT/ Lely Tigo 100 XR --
+The Tigo loader wagon was built by Lely a couple of years ago. The AGCO Group (FENDT) has now taken over the grassland technology from Lely.
+With this pack you get the biggest loaderwagon of the XR series in two different variants: once the old one from Lely and the new one from FENDT.
+
+Features:
+- Capacity: Chooseable after purchase: 54.000, 75.000 or 100.000 liters
+- Basic price: 132500$ (FENDT: +3800, Dosing Unit: +5000)
+- Wheel choice
+
+
+]]></en>
+        <de><![CDATA[
+-- FENDT/ Lely Tigo 100 XR --
+Der Tigo-Ladewagen wurde bis vor einigen Jahrn noch von der Firma Lely gebaut. Der AGCO Konzern (FENDT) hat nun aber die Grünlandtechnik von Lely übernommen.
+Mit diesem Pack bekommt ihr nun den größten Ladewagen der XR-Serie in zwei verschiedenen Varianten: Ein mal den alten von Lely und den neuen von FENDT.
+
+Features:
+- Kapazität: Wählbar nach Kauf: 54.000, 75.000 oder 100.000 Liter
+- Preis: 132500€ (FENDT: +3800, Dosierwalzen: +5000)
+- Reifenwahl
+
+
+]]></de>
+    </description>
+
+    <iconFilename>icon.dds</iconFilename>
+    <multiplayer supported="true"/>
+
+    <storeItems>
+        <storeItem rootNode="vehicle" xmlFilename="LelyTigoLoaderWagon100D.xml"/>
+        <storeItem rootNode="vehicle" xmlFilename="FendtTigoLoaderWagon100D.xml"/>
+    </storeItems>
+
+   <specializations>
+        <specialization name="variableCapacity" className="VariableCapacity" filename="scripts/VariableCapacity.lua"/>
+    </specializations>
+	
+	<vehicleTypes>
+		<type name="FendtLelyVariableCapacity" parent="forageWagon" className="Vehicle" filename="$dataS/scripts/vehicles/Vehicle.lua">
+			<specialization name="variableCapacity" />
+		</type>
+	</vehicleTypes>		
+	
+	<actions>
+		<action name="toggleCapacity" axisType="HALF" />
+	</actions>
+
+	<inputBinding>	
+		<actionBinding action="toggleCapacity">
+			<binding device="KB_MOUSE_DEFAULT" input="KEY_k" index="1" />
+		</actionBinding>
+	</inputBinding>
+	
+    <l10n>
+        <text name="config_wDosingUnit">
+            <en>With Dosing Unit</en>
+            <de>Mit Dosierwalzen</de>
+        </text>
+        <text name="config_woDosingUnit">
+            <en>Without Dosing Unit</en>
+            <de>Ohne Dosierwalzen</de>
+        </text>
+        <text name="toggleCapacity">
+            <de>Ladegut pressen aktivieren/deaktivieren</de>
+            <en>Enable/disable payload compaction</en>
+        </text>
+        <text name="input_toggleCapacity">
+            <de>Ladegut pressen aktivieren/deaktivieren</de>
+            <en>Enable/disable payload compaction</en>
+        </text>
+        <text name="WarningNotEmpty">
+            <de>Bitte erst den Anhänger entladen.</de>
+            <en>Unload the trailer first</en>
+        </text>
+        <text name="currentCapacity">
+            <de>Momentane Kapazität:</de>
+            <en>Current capacity:</en>
+        </text>
+    </l10n>
+</modDesc>
